@@ -15,7 +15,7 @@ public class Prueba_programa {
          int n =leer.nextInt();
          Coordenada [] puntos = new Coordenada[n];
          Desplazaminto(puntos);
-         Distancia(puntos);
+
          System.out.println("-------------------------------------");
          System.out.println("Estos son los Movimientos realizados");
          System.out.println("-------------------------------------");
@@ -26,9 +26,9 @@ public class Prueba_programa {
          }
          
          System.out.println("-------------------------------------");
-         System.out.println("Distancia de  los Movimientos realizados");
+         System.out.println("Distancia de  los Desplazamientos realizados");
          System.out.println("-------------------------------------");
-         System.out.println(Distancia(puntos));
+         System.out.println("Distancia total recorrida= "+Distancia(puntos));
          
     
      
@@ -68,7 +68,6 @@ public class Prueba_programa {
             System.out.println("Distancia "+(i+1)+"= "+dis);
             suma= suma +dis;  
         }
-        System.out.println("Distancia total recorrida= ");
         return suma;
     }
 
