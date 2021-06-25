@@ -47,10 +47,10 @@ public class Prueba_programa {
             des = leer.nextInt();
             if((i+1) % 2 == 0){
                 ram = (int)(Math.random()*10+1);
-                p[i] = new Coordenada(des,ram);
+                p[i] = new Coordenada(des+des,ram);
             }else{
                 ram = (int)(Math.random()*10+1);
-                p[i] = new Coordenada(ram,des);
+                p[i] = new Coordenada(ram,des+des);
             }
             
         }
