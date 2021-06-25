@@ -58,19 +58,26 @@ public class Prueba_programa {
     }
      
     public static double Distancia(Coordenada p[]){
-        double dis;
-        double suma=0;
-        for (int i = 0; i < p.length; i++){
-            int x = (int) Math.pow(p[i].getX(),2);
-            int y = (int) Math.pow(p[i].getY(),2);
-            
-            dis=Math.sqrt(x+y);
-            System.out.println("Distancia "+(i+1)+"= "+dis);
-            suma= suma +dis;  
+       double dis;
+        double suma = 0;
+        double aux = 0;
+        for (int i = 0; i < p.length; i++) {
+
+            if (i == 0) {
+                
+                int x = (int) Math.pow(p[i].getX(), 2);
+                int y = (int) Math.pow(p[i].getY(), 2);
+                dis = Math.sqrt(x + y);
+                System.out.println("Distancia " + (i + 1) + "= " + dis);
+                
+            } else {
+                int x = (int) Math.pow(p[i-1].getX()-p[i].getX(), 2);
+                int y = (int) Math.pow(p[i-1].getY()-p[i].getY(), 2);
+                dis = Math.sqrt(x + y);
+                System.out.println("Distancia " + (i + 1) + "= " + dis);
+            }
+            suma = suma + dis;
         }
         return suma;
-    }
-
-
-    
+    }   
 }
